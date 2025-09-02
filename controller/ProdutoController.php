@@ -37,8 +37,12 @@ class ProdutoController {
     }
 
     public function destroy() {
-        Produto::destroy($_GET['id']);
-        header("Location: index.php?c=produto&a=index");
+    $codigo = $_GET['id'] ?? null;
+    if ($codigo) {
+        Produto::destroy($codigo);
+        Carrinho::remove($codigo); // garante que saia do carrinho
+    }
+    header("Location: index.php?c=produto&a=index");
     }
 
     public function addCarrinho() {

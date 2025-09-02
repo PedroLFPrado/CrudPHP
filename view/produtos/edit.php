@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="public/style.css">
+
 <h2>Editar Produto</h2>
 <form method="POST">
     Descrição: <input type="text" name="descricao" value="<?= htmlspecialchars($produto->descricao) ?>" required><br>

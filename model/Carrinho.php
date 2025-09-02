@@ -17,6 +17,7 @@ class Carrinho {
 
         if (!isset($_SESSION['carrinho'][$codigo])) {
             $_SESSION['carrinho'][$codigo] = [
+                'codigo' => $codigo,
                 'descricao' => $produto->descricao,
                 'preco' => $produto->preco,
                 'qtde' => $qtde
@@ -31,4 +32,11 @@ class Carrinho {
         }
         return true;
     }
+
+    public static function remove($codigo) {
+    if (isset($_SESSION['carrinho'][$codigo])) {
+        unset($_SESSION['carrinho'][$codigo]);
+    }
+    }
+
 }

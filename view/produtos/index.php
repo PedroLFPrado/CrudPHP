@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="public/style.css">
+
 <h2>Lista de Produtos</h2>
 <a href="index.php?c=produto&a=create">[Novo Produto]</a> | 
 <a href="index.php?c=carrinho&a=index">[Ver Carrinho]</a>
