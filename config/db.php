@@ -4,7 +4,7 @@ class db {
         $host = "localhost";
         $dbname = "TOCC8php";
         $user = "postgres";
-        $password = "1234"; // altere conforme seu ambiente
+        $password = "1234";
 
         try {
             $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
